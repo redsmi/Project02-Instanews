@@ -1,8 +1,5 @@
-alert(
+// alert(  
+// "testing 125"
+// )
 
-    
-"testing script lint browser sync working"
-
-)
-
-console.log('hello')
+console.log('123333')

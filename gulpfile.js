@@ -1,12 +1,31 @@
 // Require Gulp first!
 var gulp = require('gulp'); // Load Gulp!
 // Now that we've installed the uglify package we can require it:
-var uglify = require('gulp-uglify'),
+var uglify = require('gulp-uglify');
     rename = require('gulp-rename');
 var browserSync = require('browser-sync').create();
     eslint = require('gulp-eslint');
+    sass = require('gulp-sass');
+    autoprefixer = require('gulp-autoprefixer');
+    cssnano = require('gulp-cssnano');
+    prettyError = require('gulp-prettyerror');
 
+// gulp task for sass
+  gulp.task('sass', function(){
+    return gulp.src('./scss/style.scss')
+    .pipe(sass())
+    .pipe(prettyError())
+    .pipe(autoprefixer({
+        browsers: ['last 2 versions']
+      })
+    )
+    .pipe(gulp.dest('./build/css'))
+    .pipe(cssnano())
+    .pipe(rename('style.min.css'))
+    .pipe(gulp.dest('./build/css'));
+  });
 
+// Lint task for the JS
 gulp.task('lint', function (){
   return gulp.src('js/*.js')
   .pipe(eslint())
@@ -30,26 +49,31 @@ gulp.task('say_hello', function(done){
 
 // watches js files, once a savechange is detected, runs script ugilfy+rename+save to build/js folder
 gulp.task('watch', function() {
-  gulp.watch('js/*.js', gulp.parallel('script'));
+  gulp.watch('scss/*.scss', gulp.series('sass'));
+  gulp.watch('js/*.js', gulp.series('script'));
 });
 
-                          // gulp.task('css-sync', function(){
-                          //   return gulp.src('style.css')
-                          // })
-
-                          // gulp.watch('style.css').on('change', browserSync.reload);
-
 // browser sync, watches build/js folder
+// gulp.task('browser-sync', function() {
+//   browserSync.init({
+//     server: {
+//         baseDir: "./"
+//     }
+//   });
+//   gulp.watch(['*.html', './build/css/*.css', 'build/js/*.js']).on('change', browserSync.reload);
+// });
+
+//gulp browser sync task
 gulp.task('browser-sync', function() {
   browserSync.init({
-    server: {
-        baseDir: "./"
-    }
+     server: {
+        baseDir: './'
+     }
   });
-  gulp.watch('build/js/*.js').on('change', browserSync.reload);
+  gulp.watch(['*.html','build/css/*.css','./build/js/*.js']).on('change', browserSync.reload);
 });
 
 
 // Modify our default task method by passing an array of task names
 // Nope, make our default run functions in parallel
-gulp.task('default', gulp.parallel('say_hello', 'watch', 'browser-sync'));
+gulp.task('default', gulp.parallel('watch', 'browser-sync'));
