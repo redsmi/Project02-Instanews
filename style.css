@@ -5,10 +5,33 @@
 
 body {
     background-color: black;
+    height: 100vh;
+}
+
+.initial-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.search-form,
+.copyright {
+    color: white;
 }
 
 @media (min-width:600px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
 }
 
 @media (min-width:1000px) {
+    .initial-screen {
+        align-items: flex-start;
+    }
 }

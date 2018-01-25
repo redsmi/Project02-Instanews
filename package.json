@@ -1,0 +1,27 @@
+{
+  "name": "instanews",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redsmi/Project02-Instanews.git"
+  },
+  "author": "David Yin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/redsmi/Project02-Instanews/issues"
+  },
+  "homepage": "https://github.com/redsmi/Project02-Instanews#readme",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^4.0.0",
+    "gulp-eslint": "^4.0.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0"
+  },
+  "dependencies": {}
+}
