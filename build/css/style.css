@@ -96,6 +96,12 @@ body {
   text-align: center;
   height: 100vh;
   border: dotted silver 3px; }
+  @media screen and (min-width: 1000px) {
+    .initial-screen {
+      background-color: chocolate;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; } }
 
 header {
   display: -webkit-box;
@@ -109,10 +115,16 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   border: dotted red 3px; }
   header p {
     line-height: 2rem; }
+  @media screen and (min-width: 600px) {
+    header {
+      background-color: grey;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap; } }
 
 .logo {
   width: 300px;
@@ -176,27 +188,3 @@ footer {
   background-position: center;
   height: 35rem;
   width: 100%; }
-
-@media (min-width: 600px) {
-  header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 0; } }
-
-@media (min-width: 1000px) {
-  .initial-screen {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start; }
-  footer {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start; } }

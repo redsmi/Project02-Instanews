@@ -1,11 +1,11 @@
 
-console.log('33444')
+console.log('333')
 
 $('.loading').hide();
         
 $('select').on('change', function(event) {
     event.preventDefault();
-    var storiesList = $('#story-item')
+    // var storiesList = $('#story-item')
     // $('.loading').show();
 
     var url = "https://api.nytimes.com/svc/topstories/v2/";
@@ -31,13 +31,12 @@ $('select').on('change', function(event) {
         $.each(filteredResults, function(index, value){
             console.log(value);
                 
-        var img = '<img src="' + data.results[index].multimedia[3].url + '">';
+        var img = '<img src="' + data.results[index].multimedia[1].url + '">';
 
         $('.news-grid').append(img);
-        
-
+        })
     })
-})     
+
     .fail(function(err) {
         $('.loading-gif').hide();
         $('.news-grid').append('<h1>No ___ news available...</h1>')
