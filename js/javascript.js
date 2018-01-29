@@ -23,12 +23,12 @@ $('select').on('change', function(event) {
 
         var filteredResults = data.results.filter(function(el) {
             return el.multimedia.length > 0;
-        }).slice(0,6)
+        }).slice(0,12)
         console.log(filteredResults);            
 
         $.each(filteredResults, function(index, value){
         // console.log(value); 
-        var imglink = data.results[index].multimedia[1].url;
+        var imglink = data.results[index].multimedia[4].url;
         var urllink = data.results[index].url;
         var caption = data.results[index].abstract;
         
