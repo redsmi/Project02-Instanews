@@ -1,11 +1,10 @@
 
-console.log('333')
+console.log('asdfasdfa')
 
 $('.loading').hide();
         
 $('select').on('change', function(event) {
     event.preventDefault();
-    // var storiesList = $('#story-item')
     // $('.loading').show();
 
     var url = "https://api.nytimes.com/svc/topstories/v2/";
@@ -22,18 +21,25 @@ $('select').on('change', function(event) {
     }).done(function(data) {
         console.log(data.results);
 
-           var filteredResults = data.results.filter(function(el) {
-                return el.multimedia.length > 0;
-            
-            }).slice(0,12)
-            console.log(filteredResults);            
+        var filteredResults = data.results.filter(function(el) {
+            return el.multimedia.length > 0;
+        }).slice(0,6)
+        console.log(filteredResults);            
 
         $.each(filteredResults, function(index, value){
-            console.log(value);
-                
-        var img = '<img src="' + data.results[index].multimedia[1].url + '">';
+        // console.log(value); 
+        var imglink = data.results[index].multimedia[1].url;
+        var urllink = data.results[index].url;
+        var caption = data.results[index].abstract;
+        
+        var divnews = '<div class="story-box"'
+            divnews += ' style="background-image: url(' + imglink + ')">';
+                divnews += '<a href="'+ urllink + '" target="_blank">'
+                    divnews += '<div class="caption-box">'
+                        divnews += '<p>' + caption + '</p>'
+            divnews += '</div></a></div>'
 
-        $('.news-grid').append(img);
+        $('.top-news').append(divnews);
         })
     })
 

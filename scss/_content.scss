@@ -11,7 +11,7 @@ body {
     align-items: center;
     text-align: center;
     height: 100vh;
-    border: dotted silver 3px;
+    // border: dotted silver 3px;
     @media screen and (min-width:1000px) {
         background-color: chocolate;
         align-items: flex-start;    
@@ -50,10 +50,20 @@ header {
 
 .news-grid {
     border: dotted yellow 3px;
-}
-
-.top-news p {
-    color: red;
+    width: 100%;
+    margin: 0 auto;
+    p {
+        color: blue;
+        font-weight: 500px;
+    }
+    .ajax-loader {
+        height: 10rem;
+        width: 10rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 footer {
@@ -70,27 +80,6 @@ footer {
 .copyright {
     color: white;
 }
-
-.news-grid p {
-    color: blue;
-    font-weight: 500px;
-}
-
-.loading {
-    // display: flex;
-    // position: relative;
-    // justify-content: center;
-    // align-items: center;
-    // width: 100%;
-    img {
-      height: 10rem;
-      width: 10rem;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-   }
-}
-
 
 .story-box-container {
     display: flex;

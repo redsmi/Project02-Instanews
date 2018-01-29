@@ -94,8 +94,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  height: 100vh;
-  border: dotted silver 3px; }
+  height: 100vh; }
   @media screen and (min-width: 1000px) {
     .initial-screen {
       background-color: chocolate;
@@ -136,10 +135,20 @@ header {
   border: dotted rosybrown 3px; }
 
 .news-grid {
-  border: dotted yellow 3px; }
-
-.top-news p {
-  color: red; }
+  border: dotted yellow 3px;
+  width: 100%;
+  margin: 0 auto; }
+  .news-grid p {
+    color: blue;
+    font-weight: 500px; }
+  .news-grid .ajax-loader {
+    height: 10rem;
+    width: 10rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
 
 footer {
   width: 100%;
@@ -152,17 +161,6 @@ footer {
 .search-form,
 .copyright {
   color: white; }
-
-.news-grid p {
-  color: blue;
-  font-weight: 500px; }
-
-.loading img {
-  height: 10rem;
-  width: 10rem;
-  position: absolute;
-  top: 50%;
-  left: 50%; }
 
 .story-box-container {
   display: -webkit-box;
