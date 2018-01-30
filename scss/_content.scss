@@ -1,17 +1,18 @@
 body {
-    background-color: black;
     height: 100vh;
+    background-color: black;
+    color: white;
     font-family: 'Open Sans Light', 'Arial Narrow', Arial, sans-serif;
 }
 
 .initial-screen {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between; /* use with margins */
     align-items: center;
     text-align: center;
-    height: 100vh;
-    // border: dotted silver 3px;
+    min-height: 100vh; /* prevents news grid from going off page and covering */
+    border: dotted silver 2px;
     @media screen and (min-width:1000px) {
         background-color: chocolate;
         align-items: flex-start;    
@@ -23,37 +24,49 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    // height: 100%;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    height: 100%; /* not doing anything */
+    margin-top: 8rem; /* with jc: space-between */
+    padding: 2rem;
         p {
             line-height: 2rem;
         }
-    border: dotted red 3px;
+    border: dotted red 2px;
     @media screen and (min-width: 600px) {
             background-color: grey;
             flex-wrap: nowrap;
+            margin-top: 0;
+            padding: 0;
     }
 }
 
 .logo {
     width: 300px;
-    border: dotted pink 3px;
+    border: dotted pink 2px;
     margin-bottom: 1rem;
+    @media screen and (min-width: 600px) {
+    }
 }
-    
+
+.smaller-header {
+    margin-top: 0;
+    img {
+        max-height: 100px;
+        max-width: 100px;
+    }
+}
+
 .search-form {
     width: 300px;
-    border: dotted rosybrown 3px;
+    border: dotted rosybrown 2px;
     // margin-bottom: 1rem;
 }
 
 .news-grid {
-    border: dotted yellow 3px;
+    border: dotted yellow 2px;
     width: 100%;
     margin: 0 auto;
     p {
-        color: blue;
+        color: white;
         font-weight: 500px;
     }
     .ajax-loader {
@@ -75,15 +88,15 @@ header {
 .story-box {
     border: 1px solid #fff;
     display: flex;
-    justify-content: center; 
-    align-items: center;
+    // justify-content: center; 
+    align-items: flex-end;
     background-size: cover;
-    // background-position: center;
+    background-position: center;
     // width: 100vw;
-    height: 50vw;
+    height: 420px;
     flex: 1 0 100%;
     @media screen and (min-width: 600px) {
-        flex: 1 0 33.333%;
+        flex: 1 0 30%;
     }
     @media screen and (min-width: 1000px) {
         flex: 1 0 20%;
@@ -92,17 +105,19 @@ header {
 
 .caption-box {
     background: rgba(0, 0, 0, .50);
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    // position: absolute;
-    bottom: 0;
+    text-align: left;
+    border: silver dotted 2px;
+        p {
+            line-height: 1.5rem;
+            padding: 0.5rem;
+        }
 }
 
 footer {
     width: 100%;
     border: dotted green 3px;
     width: 300px;
+    margin-bottom: 3rem; /* with jc: space-between */
 }
 
 .copyright {

@@ -1,12 +1,15 @@
 
-console.log('asdfasdfa')
+console.log('aaaa')
 
 $('.loading').hide();
         
 $('select').on('change', function(event) {
     event.preventDefault();
-    // $('.loading').show();
+    $('.loading').show();
+    $('.top-news').empty();
 
+    $('header').addClass("smaller-header");
+    
     var url = "https://api.nytimes.com/svc/topstories/v2/";
     url += $(this).val();
     url += '.json';
@@ -19,18 +22,21 @@ $('select').on('change', function(event) {
       method: 'GET',
 
     }).done(function(data) {
-        console.log(data.results);
 
-        var filteredResults = data.results.filter(function(el) {
-            return el.multimedia.length > 0;
-        }).slice(0,12)
-        console.log(filteredResults);            
+        if(data.results.length !== 0){ /* jim added */
+        // console.log(data.results);
+
+        var filteredResults = data.results.filter(function(index) {
+            return index.multimedia.length > 4; /* ian suggest change 0 to 4 */
+        }).slice(0,12);
+
+        // console.log(filteredResults);            
 
         $.each(filteredResults, function(index, value){
         // console.log(value); 
-        var imglink = data.results[index].multimedia[4].url;
-        var urllink = data.results[index].url;
-        var caption = data.results[index].abstract;
+        var imglink = value.multimedia[4].url; /* jim change data.results[index] to value */
+        var urllink = value.url; /* jim change data.results[index] to value */
+        var caption = value.abstract; /* jim change data.results[index] to value */
         
         var divnews = '<div class="story-box"'
             divnews += ' style="background-image: url(' + imglink + ')">';
@@ -39,8 +45,11 @@ $('select').on('change', function(event) {
                         divnews += '<p>' + caption + '</p>'
             divnews += '</div></a></div>'
 
+        $('.loading').hide();
         $('.top-news').append(divnews);
         })
+
+    }
     })
 
     .fail(function(err) {
