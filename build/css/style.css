@@ -97,11 +97,9 @@ body {
           align-items: center;
   text-align: center;
   min-height: 100vh;
-  /* prevents news grid from going off page and covering */
-  border: dotted silver 2px; }
+  /* prevents news grid from going off page and covering */ }
   @media screen and (min-width: 1000px) {
     .initial-screen {
-      background-color: chocolate;
       -webkit-box-align: start;
           -ms-flex-align: start;
               align-items: flex-start; } }
@@ -121,13 +119,11 @@ header {
   height: 100%;
   margin-top: 8rem;
   /* with jc: space-between */
-  padding: 2rem;
-  border: dotted red 2px; }
+  padding: 2rem; }
   header p {
     line-height: 2rem; }
   @media screen and (min-width: 600px) {
     header {
-      background-color: grey;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
       margin-top: 12rem;
@@ -142,19 +138,16 @@ header {
 
 .logo {
   width: 300px;
-  border: dotted pink 2px;
   margin-bottom: 1rem; }
 
 .search-form {
-  width: 300px;
-  border: dotted rosybrown 2px; }
+  width: 300px; }
 
 select,
 select .dropdown {
   text-transform: capitalize; }
 
 .news-grid {
-  border: dotted yellow 2px;
   width: 100%;
   margin: 0 auto; }
   .news-grid p {
@@ -181,7 +174,6 @@ select .dropdown {
       flex-wrap: wrap; }
 
 .story-box {
-  border: 1px solid #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -202,20 +194,20 @@ select .dropdown {
   @media screen and (min-width: 1000px) {
     .story-box {
       -webkit-box-flex: 1;
-          -ms-flex: 1 0 20%;
-              flex: 1 0 20%; } }
+          -ms-flex: 1 0 24%;
+              flex: 1 0 24%; } }
+  .story-box a {
+    text-decoration: none; }
 
 .caption-box {
   background: rgba(0, 0, 0, 0.5);
-  text-align: left;
-  border: silver dotted 2px; }
+  text-align: left; }
   .caption-box p {
     line-height: 1.5rem;
     padding: 0.5rem; }
 
 footer {
   width: 100%;
-  border: dotted green 3px;
   width: 300px;
   margin-bottom: 4rem;
   /* with jc: space-between */ }
@@ -231,5 +223,4 @@ footer {
   height: auto; }
 
 .copyright {
-  border: dotted turquoise 3px;
   color: #c2c2c2; }
