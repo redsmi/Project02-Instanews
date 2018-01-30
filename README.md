@@ -17,13 +17,14 @@
 <p>Desktop, min 1000px</p> ![](https://i.imgur.com/jUPdjBe.jpg)
 
 <h3>Technologies used and personal learnings:</h3>
-HTML: For this project, HTML was a minimal as most of what's populating the page was written in Javascript
-SCSS: I found that SASS is much quicker and simpler, both writing and reviewing, than plain CSS
-Javascript:
-JQuery:
-AJAX:
-Font Faces:
-Node.js:
-GULP (uglify, rename, auto-prefixer, sass, eslint, watchdog, browser-sync, css-nano, pretty-error)
+<p>HTML: For this project, HTML was rather minimal as most of what's eventually populating the page was written in Javascript</p>
+<p>SCSS: I found that SASS is much quicker and simpler, both writing and reviewing, than plain CSS. The biggest advantage I found and used is SASS nesting and media queries.</p>
+<p>Javascript: document ready function, declaring variables, concatenating, adding and styling divs, if function, appending, console logging</p>
+<p>JQuery: transversing DOM, toggle visibility hide and show, form select, form event, val method, each function</p>
+<p>AJAX: .ajax, .done, .fail, accessing the New York Times API</p>
+<p>The most difficult part of this project was the Javascript. First deciphering the API arrays and objects, and figuring out how to target/return the values. Then muh needed help was required incorporating a filter and loop function to display the right amount of news. Keeping track of nesting, brackets, and apostrophes to not break the code is more difficult than in HTML and CSS due to the sheer amount of brackets necessary.</p>
+<p>Font Faces: The webpage uses Open Sans Light font, with its different font file formats downloaded from transfonter.org. I got more practice in organizing my project folder for linking local files in stylesheets.</p>
+<p>Node.js and GULP (uglify, rename, auto-prefixer, sass, eslint, watchdog, browser-sync, css-nano, pretty-error):</p>
+<p>Even though written step-by-step with an instructor, gulpfile.js file was difficult to understand, write, and debug. But of course it's uses became well worth the trouble. A class exercise discussing with peers about the flow of the gulpfile clarified its steps and functions.</p>
 
 
