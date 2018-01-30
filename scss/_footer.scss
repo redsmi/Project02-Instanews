@@ -1,0 +1,21 @@
+footer {
+    width: 100%;
+    width: 300px;
+    margin-bottom: 4rem; /* with jc: space-between */
+    @media screen and (min-width: 1000px) {
+        margin-bottom: 10rem;
+    }
+    span {
+        text-transform: uppercase;
+    }
+}
+
+.smaller-footer {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    height: auto;
+}
+
+.copyright {
+    color: #c2c2c2;
+}

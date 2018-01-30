@@ -1,0 +1,45 @@
+body {
+    height: 100vh;
+    background-color: black;
+    color: white;
+    font-family: 'Open Sans Light', 'Arial Narrow', Arial, sans-serif;
+}
+
+.initial-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* use with margins */
+    align-items: center;
+    text-align: center;
+    min-height: 100vh; /* prevents news grid from going off page and covering */
+    @media screen and (min-width:1000px) {
+        align-items: flex-start;    
+    }
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 8rem; /* with jc: space-between */
+    padding: 2rem;
+        p {
+            line-height: 2rem;
+        }
+    @media screen and (min-width: 600px) {
+            flex-wrap: nowrap;
+            margin-top: 12rem;
+            padding: 0;
+    }
+}
+
+.smaller-header {
+    margin-top: 0;
+    height: auto;
+    img {
+        height: 100px;
+        width: 100px;
+    }
+}

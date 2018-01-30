@@ -1,56 +1,5 @@
-body {
-    height: 100vh;
-    background-color: black;
-    color: white;
-    font-family: 'Open Sans Light', 'Arial Narrow', Arial, sans-serif;
-}
-
-.initial-screen {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* use with margins */
-    align-items: center;
-    text-align: center;
-    min-height: 100vh; /* prevents news grid from going off page and covering */
-    // border: dotted silver 2px;
-    @media screen and (min-width:1000px) {
-        // background-color: chocolate;
-        align-items: flex-start;    
-    }
-}
-
-header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    margin-top: 8rem; /* with jc: space-between */
-    padding: 2rem;
-        p {
-            line-height: 2rem;
-        }
-    // border: dotted red 2px;
-    @media screen and (min-width: 600px) {
-            // background-color: grey;
-            flex-wrap: nowrap;
-            margin-top: 12rem;
-            padding: 0;
-    }
-}
-
-.smaller-header {
-    margin-top: 0;
-    height: auto;
-    img {
-        height: 100px;
-        width: 100px;
-    }
-}
-
 .logo {
     width: 300px;
-    // border: dotted pink 2px;
     margin-bottom: 1rem;
     @media screen and (min-width: 600px) {
     }
@@ -58,7 +7,6 @@ header {
 
 .search-form {
     width: 300px;
-    // border: dotted rosybrown 2px;
 }
 
 select,
@@ -67,7 +15,6 @@ select .dropdown, {
 }
 
 .news-grid {
-    // border: dotted yellow 2px;
     width: 100%;
     margin: 0 auto;
     p {
@@ -91,7 +38,6 @@ select .dropdown, {
 }
 
 .story-box {
-    // border: 1px solid #fff;
     display: flex;
     position: relative;
         a {
@@ -116,33 +62,8 @@ select .dropdown, {
 .caption-box {
     background: rgba(0, 0, 0, .50);
     text-align: left;
-    // border: silver dotted 2px;
         p {
             line-height: 1.5rem;
             padding: 0.5rem;
         }
-}
-
-footer {
-    width: 100%;
-    // border: dotted green 3px;
-    width: 300px;
-    margin-bottom: 4rem; /* with jc: space-between */
-    @media screen and (min-width: 1000px) {
-        margin-bottom: 10rem;
-    }
-    span {
-        text-transform: uppercase;
-    }
-}
-
-.smaller-footer {
-    margin-top: 1rem;
-    margin-bottom: 3rem;
-    height: auto;
-}
-
-.copyright {
-    // border: dotted turquoise 3px;
-    color: #c2c2c2;
 }
