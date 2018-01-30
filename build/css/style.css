@@ -131,7 +131,7 @@ header {
       background-color: grey;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
-      margin-top: 0;
+      margin-top: 12rem;
       padding: 0; } }
 
 .logo {
@@ -140,10 +140,11 @@ header {
   margin-bottom: 1rem; }
 
 .smaller-header {
-  margin-top: 0; }
+  margin-top: 0;
+  height: auto; }
   .smaller-header img {
-    max-height: 100px;
-    max-width: 100px; }
+    height: 100px;
+    width: 100px; }
 
 .search-form {
   width: 300px;
@@ -213,8 +214,11 @@ footer {
   width: 100%;
   border: dotted green 3px;
   width: 300px;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   /* with jc: space-between */ }
+  @media screen and (min-width: 1000px) {
+    footer {
+      margin-bottom: 10rem; } }
 
 .copyright {
   border: dotted turquoise 3px; }
