@@ -39,14 +39,6 @@ header {
     }
 }
 
-.logo {
-    width: 300px;
-    border: dotted pink 2px;
-    margin-bottom: 1rem;
-    @media screen and (min-width: 600px) {
-    }
-}
-
 .smaller-header {
     margin-top: 0;
     height: auto;
@@ -56,10 +48,23 @@ header {
     }
 }
 
+.logo {
+    width: 300px;
+    border: dotted pink 2px;
+    margin-bottom: 1rem;
+    @media screen and (min-width: 600px) {
+    }
+}
+
 .search-form {
     width: 300px;
     border: dotted rosybrown 2px;
     // margin-bottom: 1rem;
+}
+
+select,
+select .dropdown, {
+    text-transform: capitalize;
 }
 
 .news-grid {
@@ -122,6 +127,12 @@ footer {
     @media screen and (min-width: 1000px) {
         margin-bottom: 10rem;
     }
+}
+
+.smaller-footer {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    height: auto;
 }
 
 .copyright {

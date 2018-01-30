@@ -9,6 +9,7 @@ $('select').on('change', function(event) {
     $('.top-news').empty();
 
     $('header').addClass("smaller-header");
+    $('footer').addClass("smaller-footer");
     
     var url = "https://api.nytimes.com/svc/topstories/v2/";
     url += $(this).val();
