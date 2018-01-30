@@ -24,7 +24,7 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    height: 100%; /* not doing anything */
+    height: 100%;
     margin-top: 8rem; /* with jc: space-between */
     padding: 2rem;
         p {
@@ -59,7 +59,6 @@ header {
 .search-form {
     width: 300px;
     border: dotted rosybrown 2px;
-    // margin-bottom: 1rem;
 }
 
 select,
@@ -76,8 +75,8 @@ select .dropdown, {
         font-weight: 500px;
     }
     .ajax-loader {
-        height: 10rem;
-        width: 10rem;
+        height: 8rem;
+        width: 8rem;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -94,11 +93,9 @@ select .dropdown, {
 .story-box {
     border: 1px solid #fff;
     display: flex;
-    // justify-content: center; 
     align-items: flex-end;
     background-size: cover;
     background-position: center;
-    // width: 100vw;
     height: 420px;
     flex: 1 0 100%;
     @media screen and (min-width: 600px) {
@@ -127,6 +124,9 @@ footer {
     @media screen and (min-width: 1000px) {
         margin-bottom: 10rem;
     }
+    span {
+        text-transform: uppercase;
+    }
 }
 
 .smaller-footer {
@@ -137,9 +137,5 @@ footer {
 
 .copyright {
     border: dotted turquoise 3px;
-}
-
-.search-form,
-.copyright {
-    color: white;
+    color: #c2c2c2;
 }

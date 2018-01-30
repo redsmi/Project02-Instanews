@@ -119,7 +119,6 @@ header {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  /* not doing anything */
   margin-top: 8rem;
   /* with jc: space-between */
   padding: 2rem;
@@ -162,8 +161,8 @@ select .dropdown {
     color: white;
     font-weight: 500px; }
   .news-grid .ajax-loader {
-    height: 10rem;
-    width: 10rem;
+    height: 8rem;
+    width: 8rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -223,6 +222,8 @@ footer {
   @media screen and (min-width: 1000px) {
     footer {
       margin-bottom: 10rem; } }
+  footer span {
+    text-transform: uppercase; }
 
 .smaller-footer {
   margin-top: 1rem;
@@ -230,8 +231,5 @@ footer {
   height: auto; }
 
 .copyright {
-  border: dotted turquoise 3px; }
-
-.search-form,
-.copyright {
-  color: white; }
+  border: dotted turquoise 3px;
+  color: #c2c2c2; }
