@@ -36,12 +36,13 @@ $(document).ready(function() {
             var urllink = value.url; /* jim change data.results[index] to value */
             var caption = value.abstract; /* jim change data.results[index] to value */
             
-            var divnews = '<div class="story-box"'
+            var divnews = '<div class="story-box">'
+                divnews += '<a href="'+ urllink + '" target="_blank">'
+                divnews += '<div class="inner-story-box"'
                 divnews += ' style="background-image: url(' + imglink + ')">';
-                    divnews += '<a href="'+ urllink + '" target="_blank">'
                         divnews += '<div class="caption-box">'
                             divnews += '<p>' + caption + '</p>'
-                divnews += '</div></a></div>'
+                divnews += '</div></div></a></div>'
 
             $('.loading').hide();
             $('.top-news').append(divnews);

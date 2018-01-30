@@ -93,19 +93,23 @@ select .dropdown, {
 .story-box {
     // border: 1px solid #fff;
     display: flex;
-    align-items: flex-end;
-    background-size: cover;
-    background-position: center;
-    height: 420px;
+    position: relative;
+        a {
+            text-decoration: none;
+        }
+        .inner-story-box {
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: flex-end;
+        height: 420px;
+    }
     flex: 1 0 100%;
     @media screen and (min-width: 600px) {
         flex: 1 0 30%;
     }
     @media screen and (min-width: 1000px) {
         flex: 1 0 24%;
-    }
-    a {
-        text-decoration: none;
     }
 }
 
