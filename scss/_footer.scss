@@ -2,7 +2,7 @@ footer {
     width: 100%;
     width: 300px;
     margin-bottom: 4rem; /* with jc: space-between */
-    @media screen and (min-width: 1000px) {
+    @include desktop {
         margin-bottom: 10rem;
     }
     span {

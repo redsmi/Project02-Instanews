@@ -1,7 +1,7 @@
 .logo {
     width: 300px;
     margin-bottom: 1rem;
-    @media screen and (min-width: 600px) {
+    @include tablet {
     }
 }
 
@@ -19,7 +19,7 @@ select .dropdown, {
     margin: 0 auto;
     p {
         color: white;
-        font-weight: 500px;
+        font-weight: 500;
     }
     .ajax-loader {
         height: 8rem;
@@ -48,13 +48,13 @@ select .dropdown, {
         background-position: center;
         display: flex;
         align-items: flex-end;
-        height: 33320px;
+        height: 420px;
     }
     flex: 1 0 100%;
-    @media screen and (min-width: 600px) {
+    @include tablet {
         flex: 1 0 30%;
     }
-    @media screen and (min-width: 1000px) {
+    @include desktop {
         flex: 1 0 24%;
     }
 }
