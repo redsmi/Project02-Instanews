@@ -9,6 +9,19 @@ var browserSync = require('browser-sync').create();
     autoprefixer = require('gulp-autoprefixer');
     cssnano = require('gulp-cssnano');
     prettyError = require('gulp-prettyerror');
+    const babel = require("gulp-babel");
+
+// gulp task for babel
+var input = 'js/*.js';
+var output = 'js/transpiled' // New folder
+
+  gulp.task('babel', function(){
+    return gulp.src(input)
+      .pipe(babel())
+      .pipe(gulp.dest(output));
+  });
+// 1. Send Transpiled code to new foler
+// 2. Change
 
 // gulp task for sass
   gulp.task('sass', function(){
@@ -27,7 +40,7 @@ var browserSync = require('browser-sync').create();
 
 // Lint task for the JS
 gulp.task('lint', function (){
-  return gulp.src('js/*.js')
+  return gulp.src('js/transpiled/*.js') // New Folder
   .pipe(eslint())
   .pipe(eslint.format())
   .pipe(eslint.failAfterError());
@@ -35,14 +48,14 @@ gulp.task('lint', function (){
 
 // script task to minify JS, rename and put in build folder. Modify to call lint first.
 gulp.task('script', gulp.series('lint', function(){
-  return gulp.src('./js/*.js') // What files do we want gulp to consume?
+  return gulp.src('./js/transpiled/*.js') // What files do we want gulp to consume? // New Folder
     .pipe(uglify()) // Call the uglify function on these files
     .pipe(rename({ extname: '.min.js' })) // Rename the uglified file
     .pipe(gulp.dest('./build/js')) // Where do we put the result?
 }));
 
 // just for test+fun
-gulp.task('say_hello', function(done){
+gulp.task('say_hello', (done) => {
   console.log('Hello!');
   done();
 });
@@ -50,7 +63,7 @@ gulp.task('say_hello', function(done){
 // watches js files, once a savechange is detected, runs script ugilfy+rename+save to build/js folder
 gulp.task('watch', function() {
   gulp.watch('scss/*.scss', gulp.series('sass'));
-  gulp.watch('js/*.js', gulp.series('script'));
+  gulp.watch('js/*.js', gulp.series(['babel', 'script']));
 });
 
 // browser sync, watches build/js folder
