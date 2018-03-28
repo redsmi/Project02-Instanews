@@ -7,9 +7,16 @@
 
 <h3>Sample screenshots:</h3> 
 Initial screen:
-Mobile, max 599px ![](https://i.imgur.com/GLyP9mB.png)
-Tablet, 600 to 999px ![](https://i.imgur.com/5rbAONd.png)
-Desktop, min 1000px ![](https://i.imgur.com/LTQ7saE.png)
+
+Mobile, max 599px
+![](https://i.imgur.com/GLyP9mB.png)
+
+Tablet, 600 to 999px
+
+![](https://i.imgur.com/5rbAONd.png)
+
+Desktop, min 1000px
+![](https://i.imgur.com/LTQ7saE.png)
 
 <p>News populated:</p>
 <p>Mobile, max 599px</p> ![](https://i.imgur.com/1zTbuyc.png)
