@@ -1,6 +1,6 @@
 # Project02-Instanews
 
-<h3>The function of the Instanews webpage:<h3>
+<h3>The function of the Instanews webpage:</h3>
 <p>Based on user selection, quickly fetch and filter recent news stories from the "New York Times" Top Stories API, populating them as ages with short abstracts in the webpage.</p>
 <p>Link each news image to the news URL on the New York Times website.</p>
 <p>Resize Instanews header and footer so that it transitions from occupying the entire screen on page load to a better view with news populated.</p>
