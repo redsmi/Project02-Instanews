@@ -6,10 +6,10 @@
 <p>Resize Instanews header and footer so that it transitions from occupying the entire screen on page load to a better view with news populated.</p>
 
 <h3>Sample screenshots:</h3> 
-<p>Initial screen:</p>
-<p>Mobile, max 599px</p> ![](https://i.imgur.com/GLyP9mB.png)
-<p>Tablet, 600 to 999px</p> ![](https://i.imgur.com/5rbAONd.png)
-<p>Desktop, min 1000px</p> ![](https://i.imgur.com/LTQ7saE.png)
+Initial screen:
+Mobile, max 599px ![](https://i.imgur.com/GLyP9mB.png)
+Tablet, 600 to 999px ![](https://i.imgur.com/5rbAONd.png)
+Desktop, min 1000px ![](https://i.imgur.com/LTQ7saE.png)
 
 <p>News populated:</p>
 <p>Mobile, max 599px</p> ![](https://i.imgur.com/1zTbuyc.png)
