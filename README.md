@@ -1,5 +1,5 @@
 # Project02-Instanews
-
+![](https://i.imgur.com/GLyP9mB.png)
 <h3>The function of the Instanews webpage:</h3>
 <p>Based on user selection, quickly fetch and filter recent news stories from the "New York Times" Top Stories API, populating them as ages with short abstracts in the webpage.</p>
 <p>Link each news image to the news URL on the New York Times website.</p>
