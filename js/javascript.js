@@ -22,19 +22,16 @@ $(document).ready(function() {
 
         }).done(function(data) {
 
-            if(data.results.length !== 0){ /* jim added */
-            // console.log(data.results);
+            if(data.results.length !== 0){
 
             var filteredResults = data.results.filter(function(index) {
-                return index.multimedia.length > 4; /* ian suggest change 0 to 4 */
-            }).slice(0,12);
-            // console.log(filteredResults);            
+                return index.multimedia.length > 4;
+            }).slice(0,12);        
 
             $.each(filteredResults, function(index, value){
-            // console.log(value); 
-            var imglink = value.multimedia[4].url; /* jim change data.results[index] to value */
-            var urllink = value.url; /* jim change data.results[index] to value */
-            var caption = value.abstract; /* jim change data.results[index] to value */
+            var imglink = value.multimedia[4].url;
+            var urllink = value.url;
+            var caption = value.abstract;
             
             var divnews = '<div class="story-box">'
                 divnews += '<a href="'+ urllink + '" target="_blank">'

@@ -41,27 +41,11 @@ gulp.task('script', gulp.series('lint', function(){
     .pipe(gulp.dest('./build/js')) // Where do we put the result?
 }));
 
-// just for test+fun
-gulp.task('say_hello', function(done){
-  console.log('Hello!');
-  done();
-});
-
 // watches js files, once a savechange is detected, runs script ugilfy+rename+save to build/js folder
 gulp.task('watch', function() {
   gulp.watch('scss/*.scss', gulp.series('sass'));
   gulp.watch('js/*.js', gulp.series('script'));
 });
-
-// browser sync, watches build/js folder
-// gulp.task('browser-sync', function() {
-//   browserSync.init({
-//     server: {
-//         baseDir: "./"
-//     }
-//   });
-//   gulp.watch(['*.html', './build/css/*.css', 'build/js/*.js']).on('change', browserSync.reload);
-// });
 
 //gulp browser sync task
 gulp.task('browser-sync', function() {
