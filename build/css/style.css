@@ -121,7 +121,6 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
   margin-top: 8rem;
   /* with jc: space-between */
   padding: 2rem; }
@@ -135,7 +134,7 @@ header {
       padding: 0; } }
 
 .smaller-header {
-  margin-top: 0;
+  margin: 1.5rem 0;
   height: auto; }
   .smaller-header img {
     height: 100px;
@@ -144,6 +143,9 @@ header {
 .logo {
   width: 300px;
   margin-bottom: 1rem; }
+  @media (min-width: 600px) {
+    .logo {
+      margin-bottom: 0; } }
 
 .search-form {
   width: 300px; }
