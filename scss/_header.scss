@@ -12,7 +12,7 @@ body {
     align-items: center;
     text-align: center;
     min-height: 100vh; /* prevents news grid from going off page and covering */
-    @media screen and (min-width:1000px) {
+    @include desktop {
         align-items: flex-start;    
     }
 }
@@ -28,7 +28,7 @@ header {
         p {
             line-height: 2rem;
         }
-    @media screen and (min-width: 600px) {
+    @include tablet {
             flex-wrap: nowrap;
             margin-top: 12rem;
             padding: 0;

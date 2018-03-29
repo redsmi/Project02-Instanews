@@ -52,7 +52,7 @@ $(document).ready(function() {
 
         .fail(function(err) {
             $('.loading-gif').hide();
-            $('.news-grid').append('<h1>No ___ news available...</h1>')
+            $('.news-grid').append('<h1>No news available...</h1>')
         });
     });
 });
