@@ -84,6 +84,7 @@ select {
     background: rgba(0, 0, 0, .50);
     text-align: left;
     min-height: 25%;
+    transition: all 500ms ease;
         p {
             line-height: 1.5rem;
             padding: 0.5rem;
