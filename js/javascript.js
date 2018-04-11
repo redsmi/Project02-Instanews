@@ -3,6 +3,7 @@ $(document).ready(function() {
             
     $('select').on('change', function(event) {
         event.preventDefault();
+        $('.news-grid h1').remove();
         $('.loading').show();
         $('.top-news').empty();
 
