@@ -8,11 +8,18 @@
 
 .search-form {
     width: 300px;
+    .search-form-inner p {
+        font-size: 1.2rem;
+    }
 }
 
 select,
 select .dropdown, {
     text-transform: capitalize;
+}
+select {
+    height: 28px;
+    font-size: 1rem;
 }
 
 .news-grid {
@@ -49,7 +56,14 @@ select .dropdown, {
         background-position: center;
         display: flex;
         align-items: flex-end;
-        height: 420px;
+        height: 360px;
+        @include tablet {
+            height: 420px;
+        }
+        transition: all 500ms ease; 
+        &:hover {
+            box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.75);
+        }
     }
     flex: 1 0 100%;
     @include tablet {
